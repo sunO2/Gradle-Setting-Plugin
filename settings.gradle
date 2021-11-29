@@ -1,0 +1,5 @@
+include 'app'
+include ':plugin:applyMaven'
+include ':plugin:base'
+include ':plugin:dependencies'
+include ':plugin:setting'
