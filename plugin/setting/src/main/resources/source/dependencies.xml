@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dependencies>
+<!--            示例代码-->
+<!--        <group group="com.hezhihu.demo" id="demo" path="demo" version="1.0.0">-->
+<!--            <module id="moduleA" path="moduleA"/>-->
+<!--            <module id="moduleB" path="moduleB"/>-->
+<!--            <module id="moduleC" path="moduleC"/>-->
+<!--            <module id="moduleD" path="moduleD"/>-->
+<!--            <module id="moduleE" path="moduleE"/>-->
+<!--        </group>-->
+
+    <!--    gradle组件-->
+<!--    <group group="com.hezhihu.gradle.plugin" id="gradle_plugin" path="gradle_plugin" version="1.0.0">-->
+
+<!--    </group>-->
+
+    <!--    功能模块组件 -->
+<!--    <group group="com.hezhihu.module" id="modules" path="modules" version="1.0.0">-->
+
+<!--    </group>-->
+
+    <!--    对外开放组件 -->
+<!--    <group group="com.hezhihu.frameworks" id="frameworks" path="frameworks" version="1.0.0">-->
+
+<!--    </group>-->
+
+    <!--    服务功能模块 -->
+<!--    <group group="com.hezhihu.service" id="service" path="service" version="1.0.0">-->
+
+<!--    </group>-->
+
+</dependencies>

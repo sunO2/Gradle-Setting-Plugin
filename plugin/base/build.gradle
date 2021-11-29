@@ -1,0 +1,26 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+apply plugin: 'maven'
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    api gradleApi()
+    api localGroovy()
+    api 'com.google.code.gson:gson:2.8.9'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+}
+
+group = 'com.hezhihu.gradle.plugin'
+version = '1.0.0'
+archivesBaseName = 'base'
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file://"+rootProject.projectDir.path+"/maven/m2")
+        }
+    }
+}
