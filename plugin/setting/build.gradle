@@ -1,6 +1,8 @@
 apply plugin: 'java-library'
 apply plugin: 'kotlin'
 apply plugin: 'maven'
+apply plugin: 'maven-publish'
+
 
 
 dependencies {
@@ -22,6 +24,34 @@ uploadArchives {
     repositories {
         mavenDeployer {
             repository(url: "file://"+rootProject.projectDir.path+"/maven/m2")
+        }
+    }
+}
+
+// Because the components are created only during the afterEvaluate phase, you must
+// configure your publications using the afterEvaluate() lifecycle method.
+project.afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+//                from components.add("release")
+
+                // You can then customize attributes of the publication as shown below.
+                groupId = 'com.hezhihu.plugin'
+                artifactId = 'setting-release'
+                version = '1.0'
+            }
+            // Creates a Maven publication called “debug”.
+            debug(MavenPublication) {
+                // Applies the component for the debug build variant.
+//                from components.add("debug")
+
+                groupId = 'com.hezhihu.plugin'
+                artifactId = 'setting-debug'
+                version = '1.0'
+            }
         }
     }
 }
